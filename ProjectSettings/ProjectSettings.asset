@@ -44,8 +44,8 @@ PlayerSettings:
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
   defaultScreenHeight: 1080
-  defaultScreenWidthWeb: 1960
-  defaultScreenHeightWeb: 1080
+  defaultScreenWidthWeb: 960
+  defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 0
   m_SpriteBatchVertexThreshold: 300
@@ -137,7 +137,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   bundleVersion: 1.0.2
   preloadedAssets:
-  - {fileID: -4226291386158814869, guid: ac06ea687137e21419542df10fbb958e, type: 2}
+  - {fileID: 7413600506646498055, guid: ac06ea687137e21419542df10fbb958e, type: 2}
   - {fileID: 11400000, guid: 130cfb58788fe5049ad782163672b265, type: 2}
   - {fileID: 11400000, guid: f4352a3f0af964e49ae02b174b176dad, type: 2}
   metroInputSource: 0
