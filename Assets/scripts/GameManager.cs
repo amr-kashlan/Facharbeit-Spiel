@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
         highScore = PlayerPrefs.GetInt("record", 0);
         score = 0;
     }
-
     // Update is called once per frame
     void Update()
     {
