@@ -24,7 +24,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ScoreText.text = "Score: " + score.ToString();
+        if (highScore == 0&&score == 0)
+        {
+            ScoreText.text = "0\n Press space";
+        } else
+        {
+            ScoreText.text = score.ToString();
+        }
         if (player.isDead == true)
         {
             if (highScore<score)

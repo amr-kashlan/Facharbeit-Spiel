@@ -26,31 +26,33 @@ public class SpawnLaser : MonoBehaviour
 
     private IEnumerator WaitToSpawn()
     {
-        if (player.GetComponent<Playercontroller>().isDead == false||player.GetComponent<Playercontroller>().isPause == false)
-        { 
+       
         yield return new WaitForSeconds(0.75f);
         Spawn();
-        }
+        
     }
 
     private void Spawn()
     {
+        if (player.GetComponent<Playercontroller>().isDead == false&&player.GetComponent<Playercontroller>().isPause == false)
+        { 
         int prefabNumber = UnityEngine.Random.Range(0,31);
         Instantiate(laser[prefabNumber], new Vector3(20, UnityEngine.Random.Range(4, -5), transform.position.z), laser[prefabNumber].gameObject.transform.rotation);
+        }
         StartCoroutine(WaitToSpawn());
     }
     private IEnumerator WaitToSpawnCoin()
     {
-        if (player.GetComponent<Playercontroller>().isDead == false||player.GetComponent<Playercontroller>().isPause == false)
-        { 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(3);       
         SpawnCoin();
-        }
     }
 
     private void SpawnCoin()
     {
+        if (player.GetComponent<Playercontroller>().isDead == false&&player.GetComponent<Playercontroller>().isPause == false)
+        { 
         Instantiate(coin, new Vector3(15, UnityEngine.Random.Range(4, -5), transform.position.z), Quaternion.identity);
+        }
         StartCoroutine(WaitToSpawnCoin());
     }
 }

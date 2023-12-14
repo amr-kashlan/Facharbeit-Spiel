@@ -51,6 +51,7 @@ public class Playercontroller : MonoBehaviour
         } else if (other.gameObject.tag == "laser")
         {
             isDead = true;
+            button.gameObject.SetActive(false);
             GameOver.SetActive(true);
             gameObject.SetActive(false);
         }
