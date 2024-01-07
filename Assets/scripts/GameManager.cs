@@ -1,47 +1,60 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public int score;
-    public TextMeshProUGUI ScoreText;
-    public TextMeshProUGUI GameOverText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI gameOverText;
+    public Button pauseButton;
+    public GameObject gameOver;
     public Playercontroller player;
     public int highScore;
-    public ParticleSystem blud;
-    // Start is called before the first frame update
+    public ParticleSystem bludParticle;
+    public bool isPause;
     void Start()
     {
-        blud.Pause();
+        isPause = false;
+        bludParticle.Stop();
         highScore = PlayerPrefs.GetInt("record", 0);
         score = 0;
     }
-    // Update is called once per frame
     void Update()
     {
-        if (highScore == 0&&score == 0)
+        if (highScore == 0 && score == 0)
         {
-            ScoreText.text = "0\n Press space";
-        } else
+            scoreText.text = "0\n Press space";
+        }
+        else
         {
-            ScoreText.text = score.ToString();
+            scoreText.text = score.ToString();
         }
         if (player.isDead == true)
         {
-            if (highScore<score)
+            if (highScore < score)
             {
                 highScore = score;
                 PlayerPrefs.SetInt("record", highScore);
             }
-            blud.transform.position=new Vector3(player.transform.position.x,player.transform.position.y,player.transform.position.z);
-            blud.Play();
-            GameOverText.text = "Game Over \n"+"Score: "+score.ToString() +"\n Highscore: " + highScore.ToString();
+            pauseButton.gameObject.SetActive(false);
+            gameOver.SetActive(true);
+            bludParticle.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
+            bludParticle.Play();
+            gameOverText.text = "Game Over \n" + "Score: " + score.ToString() + "\n Highscore: " + highScore.ToString();
         }
+    }
+    public void Pause()
+    {
+        isPause = true;
+    }
+    public void Resume()
+    {
+        isPause = false;
+        player.rb.gravityScale = 1;
+        player.anim.SetBool("flying", false);
+        player.flyPartical.Stop();
     }
     public void Play()
     {

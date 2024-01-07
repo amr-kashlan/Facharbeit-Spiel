@@ -5,10 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - laser
-  - decke
-  - Spawner
-  - coin
+  - Ceiling
+  - Coin
+  - Laser
+  - Manager
   layers:
   - Default
   - TransparentFX

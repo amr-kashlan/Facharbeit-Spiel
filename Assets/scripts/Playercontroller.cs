@@ -1,42 +1,26 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
-
 
 public class Playercontroller : MonoBehaviour
 {
-    public GameObject GameOver;
     public Rigidbody2D rb;
     public Animator anim;
-    public bool isDead;
-    public GameManager gameManager;
     public ParticleSystem flyPartical;
-    public Button button;
-    public bool isPause;
-        // Start is called before the first frame update
+    public GameManager gameManager;
+    public bool isDead;
     void Start()
     {
         isDead = false;
-        isPause=false;
         flyPartical.Stop();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)&&!isPause)
+        if (Input.GetKeyDown(KeyCode.Space) && !gameManager.isPause)
         {
             rb.gravityScale = -1;
             anim.SetBool("flying", true);
             flyPartical.Play();
         }
-        if (Input.GetKeyUp(KeyCode.Space)&&!isPause)
+        if (Input.GetKeyUp(KeyCode.Space) && !gameManager.isPause)
         {
             rb.gravityScale = 1;
             anim.SetBool("flying", false);
@@ -47,12 +31,11 @@ public class Playercontroller : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground")
         {
-            anim.SetBool("touching ground", true);
-        } else if (other.gameObject.tag == "laser")
+            anim.SetBool("touchingGround", true);
+        }
+        else if (other.gameObject.tag == "Laser")
         {
             isDead = true;
-            button.gameObject.SetActive(false);
-            GameOver.SetActive(true);
             gameObject.SetActive(false);
         }
     }
@@ -60,26 +43,15 @@ public class Playercontroller : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground")
         {
-            anim.SetBool("touching ground", false);
-        } 
+            anim.SetBool("touchingGround", false);
+        }
     }
     public void OnTriggerEnter2D(Collider2D other)
-    { 
-        if (other.gameObject.tag == "coin")
+    {
+        if (other.gameObject.tag == "Coin")
         {
             Destroy(other.gameObject);
             gameManager.AddScore();
         }
-    }
-    public void Pause()
-    {
-        isPause = true;
-    }
-    public void Resume()
-    {
-        isPause = false;
-            rb.gravityScale = 1;
-            anim.SetBool("flying", false);
-            flyPartical.Stop();
     }
 }
