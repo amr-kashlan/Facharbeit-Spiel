@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        //Die Blutparikel wird gestoppt:
+        //Die Blutparikel werden gestoppt:
         bludParticle.Stop();
 
         //Der Score wird Resetet und der Highscore wird geholt durch PlayerPrefs.GetInt():
