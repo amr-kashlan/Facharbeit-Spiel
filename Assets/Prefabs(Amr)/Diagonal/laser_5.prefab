@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6409521865034792574
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2406137128817285077, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_Size.x
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592211817628584551, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1975
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923725781375251832, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_Name
+      value: laserPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050011465371215415, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050011465371215415, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050011465371215415, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050011465371215415, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92387956
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050011465371215415, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050011465371215415, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050011465371215415, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.38268343
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050011465371215415, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050011465371215415, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050011465371215415, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433514381587029795, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: speed
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433514381587029795, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: vertical
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433514381587029795, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: horizontal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5497177534716935274, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_Name
+      value: laserPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5842567820134073463, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_Name
+      value: laserPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109473415106123490, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639392176499189935, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1975
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695852004544867512, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_Mass
+      value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695852004544867512, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695852004544867512, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_Constraints
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203709714264569567, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+      propertyPath: m_Name
+      value: laser_5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
