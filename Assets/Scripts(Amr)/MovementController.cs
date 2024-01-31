@@ -1,19 +1,19 @@
 using System.Collections;
 using UnityEngine;
 
-//Diese Script ist dafür da die Objekte zu bewegen
+//Dieses Skript ist dafür da, die Objekte zu bewegen:
 public class MovementController : MonoBehaviour
 {
     //Variablen:
 
-    //speed ist die Geschwindigkeit vom Objekt
+    //speed ist die Geschwindigkeit vom Objekt.
     public int speed = 2;
-    //immortal ist immer Aktiv wenn das Objekt nicht falsch bzw. unpassend gespawnt ist
+    //immortal ist immer Aktiv, wenn das Objekt nicht falsch bzw. unpassend gespawnt ist.
     public bool immortal = false;
-    //isCoin sagt ob es ein Coin ist oder nicht
+    //isCoin sagt ob es ein Coin ist oder nicht.
     public bool isCoin;
 
-    //player und gameManager sind die Scripts PlayerController und GameManager die man braucht um informationen zu kriegen
+    //player und gameManager sind die Scripts PlayerController und GameManager die man braucht um informationen zu bekommen.
     public PlayerController player;
     public GameManager gameManager;
 
@@ -23,7 +23,7 @@ public class MovementController : MonoBehaviour
         gameManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
-        //Die Coroutine wird gestartetum zu überprüfen ob das Objekt nicht falsch bzw. unpassend gespawnt ist:
+        //Die Coroutine wird gestartet um zu überprüfen, ob das Objekt nicht falsch bzw. unpassend gespawnt ist:
         StartCoroutine(Immortality());
     }
 
@@ -69,27 +69,27 @@ public class MovementController : MonoBehaviour
         {
             speed = 10;
         }
-        //Falls man Tod ist oder das Spiel pausiert ist wird das objekt gestoppt:
-        //Das muss nach ganz unten damit es nicht überschrieben wird
+        //Falls man Tod ist oder das Spiel pausiert ist, wird das Objekt gestoppt:
+        //Das muss nach ganz unten damit es nicht überschrieben wird.
         if (player.isDead || gameManager.isPause)
         {
             speed = 0;
         }
 
-        //Wenn das Objekt ausserhalb des Sichtfelds ist wird es gelöscht:
+        //Wenn das Objekt außerhalb des Sichtfelds ist, wird es gelöscht:
         if (transform.position.x <= -15)
         {
             Destroy(transform.gameObject);
         }
 
-        //Falls das Coin richtig gespawnt ist wird es zu einem Trigger damit der Spieler nicht mit dem Coin kollidiert:
+        //Falls das Coin richtig gespawnt ist, wird es zu einem Trigger, damit der Spieler nicht mit dem Coin kollidiert:
         if (isCoin && immortal)
         {
             gameObject.GetComponent<CircleCollider2D>().isTrigger = true;
         }
     }
 
-    //Wenn das Objekt in der Decke oder im Boden oder im Laser drin Spawnt wird es gelöcht:
+    //Wenn das Objekt in der Decke, im Boden oder im Laser drin spawnt wird es gelöcht:
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Ceiling" || other.gameObject.tag == "Ground" || other.gameObject.tag == "Laser")
@@ -98,7 +98,7 @@ public class MovementController : MonoBehaviour
         }
     }
 
-    //Wenn das Laser inerhalb des Spieler großen Radius spawnt wird man gelöcht damit man theoretich unendlich lang spielen kann:
+    //Wenn der Laser inerhalb des Spielers großen Radius spawnt, wird man gelöcht, damit man theoretich unendlich lang spielen kann:
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "Laser" && !immortal && !isCoin)
@@ -107,7 +107,7 @@ public class MovementController : MonoBehaviour
         }
     }
 
-    //Wenn das Objekt nach 0.5 Sekunden nicht gelöcht wird heißt es das es richtig gespawnt ist:
+    //Wenn das Objekt nach 0.5 Sekunden nicht gelöcht wird, heißt es das es richtig gespawnt wurde:
     IEnumerator Immortality()
     {
         yield return new WaitForSeconds(0.5f);

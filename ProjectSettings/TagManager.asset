@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - Laser
   - Manager
+  - Spawner
   layers:
   - Default
   - TransparentFX

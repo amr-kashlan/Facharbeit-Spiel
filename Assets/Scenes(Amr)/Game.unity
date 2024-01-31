@@ -1371,22 +1371,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser:
-  - {fileID: 6401749129904888239, guid: 3405f0a8f5e26624a9dd5c8d0f07ed14, type: 3}
-  - {fileID: 8819825792825910451, guid: 2fac69429f4664043ace38b5a7e3160e, type: 3}
-  - {fileID: 4309208495161638585, guid: 2e31829e51c084d4fae6cab92d17cdca, type: 3}
-  - {fileID: 9203709714264569567, guid: 874ebc1645a604f469c742c94b296114, type: 3}
-  - {fileID: 2830819222424275105, guid: 499b91337a767ad4bb32c4386608e310, type: 3}
-  - {fileID: 6708247026163625328, guid: 7fc1a2e9d4e7023428c9e1d28ff67ee5, type: 3}
-  - {fileID: 4947274192723953917, guid: a242e57c5c48ba7408ba4d827344f988, type: 3}
-  - {fileID: 5954145744273821381, guid: ff8d1a63729c5e84a81bdff0d96713c5, type: 3}
-  - {fileID: 6401749129904888239, guid: 80f5a2fe3a9a2c0438056a4f1a3d9472, type: 3}
-  - {fileID: 8819825792825910451, guid: 92442070e26908541a5eec7c04ad0774, type: 3}
-  - {fileID: 4309208495161638585, guid: 293c16b2c0137074580519cdef367ef7, type: 3}
-  - {fileID: 9203709714264569567, guid: ab50d9f677c35f946bec1e7c0b80d638, type: 3}
-  - {fileID: 2830819222424275105, guid: 3b6801f1f956db0488adcf32869f6708, type: 3}
-  - {fileID: 6708247026163625328, guid: 3d445f661314e9140a771464f5ab7160, type: 3}
-  - {fileID: 4947274192723953917, guid: 73d261df7f744034db99111c5da00ca3, type: 3}
-  - {fileID: 5954145744273821381, guid: 4dc862a917fbee5409ade3a8e68d4f8e, type: 3}
+  - {fileID: 6401749129904888239, guid: 7aa78d2387c9de346874e9ce281b5ab1, type: 3}
+  - {fileID: 8819825792825910451, guid: c9b07b2db4db1e546b392e6a71bdda72, type: 3}
+  - {fileID: 4309208495161638585, guid: 6c6e1cdb5448d0546ba90063a4abadda, type: 3}
+  - {fileID: 9203709714264569567, guid: 08ba9d506553d2e42a0661cfe44bc3de, type: 3}
+  - {fileID: 2830819222424275105, guid: 745bface31afe004d8cc76146d9345a5, type: 3}
+  - {fileID: 6708247026163625328, guid: f146f88d8caf0634296e87ee34608ba4, type: 3}
+  - {fileID: 4947274192723953917, guid: 3dc8753b5a4016e47ad8e6c468d21143, type: 3}
+  - {fileID: 5954145744273821381, guid: 8ee3003f991feb6428974dd2b9afc57c, type: 3}
+  - {fileID: 6401749129904888239, guid: 3907d9d2d21130148b18934fc83f46fa, type: 3}
+  - {fileID: 8819825792825910451, guid: 9dd515409ecd4cd4e955bcaa780cae6c, type: 3}
+  - {fileID: 4309208495161638585, guid: c3e1c934771529c4c8187188704628f0, type: 3}
+  - {fileID: 9203709714264569567, guid: 005ed8b55e02c564e8398d9617b36c73, type: 3}
+  - {fileID: 2830819222424275105, guid: 79a439a0575a2b146868a9d8eeda55cc, type: 3}
+  - {fileID: 6708247026163625328, guid: 9024dc846fdbd6e47becbc4a49175ef6, type: 3}
+  - {fileID: 4947274192723953917, guid: d36933caee1d7994c81efff8da29eb9d, type: 3}
+  - {fileID: 5954145744273821381, guid: d4b8da5261034e54a805b5acde7bc8fa, type: 3}
   - {fileID: 6401749129904888239, guid: abe1962257c55654484bccebbbaae874, type: 3}
   - {fileID: 8819825792825910451, guid: bf23cd899f5eb9c4ca4fbe8195ec72ba, type: 3}
   - {fileID: 4309208495161638585, guid: e4151d30ee08dbe4ca545b837ef11b26, type: 3}
@@ -1399,13 +1399,13 @@ MonoBehaviour:
   - {fileID: 8819825792825910451, guid: 7183801095ab77b4784d1cc177f5d21e, type: 3}
   - {fileID: 4309208495161638585, guid: 9ec4a508ba757ec4bb3343d50519b2ca, type: 3}
   - {fileID: 9203709714264569567, guid: 5a399dbf3182a2449a41dc8f977bb7a9, type: 3}
+  - {fileID: 2830819222424275105, guid: aab47672fc935a24b83ae6779bbb1d4e, type: 3}
   - {fileID: 6708247026163625328, guid: 984d7e788b610834caa0d4d3a70aa1ed, type: 3}
   - {fileID: 4947274192723953917, guid: c1f66d1ba2a697b488152e203c77f1f5, type: 3}
-  - {fileID: 2830819222424275105, guid: aab47672fc935a24b83ae6779bbb1d4e, type: 3}
   - {fileID: 5954145744273821381, guid: 1a614c0d02be4e04dbfa68ad2ec24724, type: 3}
   coin: {fileID: 6923796206999535028, guid: 8cf6d49aa0645a24baecce1d7f931982, type: 3}
-  player: {fileID: 0}
-  gameManager: {fileID: 0}
+  player: {fileID: 1609465901}
+  gameManager: {fileID: 780566022}
 --- !u!4 &780566021
 Transform:
   m_ObjectHideFlags: 0
@@ -1440,7 +1440,7 @@ MonoBehaviour:
   gameOver: {fileID: 1763768048}
   gameOverText: {fileID: 1194277273}
   isPause: 0
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 1971149194}
   player: {fileID: 1609465901}
   bludParticle: {fileID: 2127450156}
 --- !u!1 &799637737

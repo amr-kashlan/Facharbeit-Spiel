@@ -1,63 +1,63 @@
 using UnityEngine;
 
-//Diese Script ist für den Spieler verantwortlich
+//Dieses Skript ist für den Spieler verantwortlich:
 public class PlayerController : MonoBehaviour
 {
     //Variablen:
 
-    //rb ist das Physik Komponent
+    //rb ist die Physikkomponente.
     public Rigidbody2D rb;
-    //anim ist das Animations Komponent was wir brauchen um Animationen zu starten
+    //anim ist die Animationskomponente, was wir brauchen, um Animationen zu starten.
     public Animator anim;
-    //flyPartical sind die Partikel für das Fliegen
+    //flyPartical sind die Partikel für das Fliegen.
     public ParticleSystem flyPartical;
 
-    //isDead sagt an ob der Spieler Tod ist oder nicht
+    //isDead sagt an, ob der Spieler Tod ist oder nicht.
     public bool isDead = false;
 
-    //gameManager ist die Script GameManager die man braucht um informationen zu kriegen
+    //gameManager ist das Skript GameManager, die man braucht, um Informationen zu bekommen.
     public GameManager gameManager;
 
     void Start()
     {
-        //Flug Partikel werden gestoppt:
+        //Flugpartikel werden gestoppt:
         flyPartical.Stop();
     }
 
     void Update()
     {
-        //Hier wird geguckt ob die Leertaste Taste gedrückt wird während dass das Spiel läuft:
+        //Hier wird geguckt, ob die Leertaste gedrückt wird, während das Spiel läuft:
         if (Input.GetKeyDown(KeyCode.Space) && !gameManager.isPause)
         {
             //Gravitation kehrt sich um:
             rb.gravityScale = -1;
-            //Dem Animator wird die nachricht gegeben das man Fliegt:
+            //Dem Animator wird die Nachricht gesendet, dass man fliegt:
             anim.SetBool("flying", true);
             //Flug Partikel werden gestartet:
             flyPartical.Play();
         }
 
-        //Hier wird geguckt ob die Leertaste Taste nicht mehr gedrückt wird während dass das Spiel läuft:
+        //Hier wird geguckt, ob die Leertaste nicht mehr gedrückt wird, während das Spiel läuft:
         if (Input.GetKeyUp(KeyCode.Space) && !gameManager.isPause)
         {
             //Gravitation kehrt sich um:
             rb.gravityScale = 1;
-            //Dem Animator wird die nachricht gegeben das man nicht mehr Fliegt:
+            //Dem Animator wird die Nachricht gesendet, dass man nicht mehr fliegt:
             anim.SetBool("flying", false);
             //Flug Partikel werden gestoppt:
             flyPartical.Stop();
         }
     }
 
-    //Wenn der Spieler mit irgend etwas Kollidiert wird diese Method einmal Aktiviert:
+    //Wenn der Spieler mit irgend etwas kollidiert, wird diese Method einmal aktiviert:
     public void OnCollisionEnter2D(Collision2D other)
     {
-        //Wenn man mit dem boden Kollidiert wird dem Animator die nachricht gegeben das man den boden Berührt:
+        //Wenn man mit dem Boden kollidiert, wird dem Animator die Nachricht gesendet, dass man den Boden berührt hat:
         if (other.gameObject.tag == "Ground")
         {
             anim.SetBool("touchingGround", true);
         }
-        //Wenn man mit Laser Kollidiert wird der Spieler Deaktiviert und isDead auf true gestellt:
+        //Wenn man mit dem Laser kollidiert, wird der Spieler deaktiviert und isDead auf true gestellt:
         else if (other.gameObject.tag == "Laser")
         {
             isDead = true;
@@ -65,20 +65,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //Wenn eine Kollision zu ende ist wird diese Method einmal Aktiviert:
+    //Wenn eine Kollision zu Ende ist wird diese Method einmal aktiviert:
     public void OnCollisionExit2D(Collision2D other)
     {
-        //Wenn man nicht mehr mit dem boden Kollidiert wird dem Animator die nachricht gegeben das man den boden nicht mehr Berührt:
+        //Wenn man nicht mehr mit dem Boden kollidiert, wird dem Animator die Nachricht gesendet, dass man den Boden nicht mehr berührt:
         if (other.gameObject.tag == "Ground")
         {
             anim.SetBool("touchingGround", false);
         }
     }
 
-    //Wenn der Spieler ein Objekt trifft was ein "Trigger" ist wird diese Method einmal Aktiviert:
+    //Wenn der Spieler ein Objekt trifft, was ein "Trigger" ist, wird diese Method einmal aktiviert:
     public void OnTriggerEnter2D(Collider2D other)
     {
-        //Wenn es ein Coin ist wird das Coin Gelöcht und die Method AddScore in gameManager einmal Aktiviert:
+        //Wenn es ein Coin ist, wird das Coin gelöcht und die Method AddScore in gameManager einmal aktiviert:
         if (other.gameObject.tag == "Coin")
         {
             Destroy(other.gameObject);
